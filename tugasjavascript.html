@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas javascript</title>
+</head>
+<style>
+    .wadah{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        margin-top: 30px;
+        
+    }
+    body{
+        background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+    input, button{
+        width: 55%;
+    }
+    input{
+        border: none;
+        padding: 5px;
+        background-color: salmon;
+        color: yellow;
+        border-radius: 5px;
+    }
+    input.button{
+        width: 50%;
+    }
+    button{
+        background-color: yellow;
+    }
+
+</style>
+<body>
+    <div class="wadah">
+        <input class="namaMotor" type="text" placeholder="nama motor">
+        <input class="jumblah" type="number" placeholder="jumblah motor">
+        <input class="harga" type="number" placeholder="harga motor"> 
+        <button>hitung</button>
+    </div>
+
+    <script>
+
+        const tombol = document.querySelector('button')
+        const namaMotor = document.querySelector('.namaMotor')
+        const jumblah = document.querySelector('.jumblah')
+        const harga = document.querySelector('.harga')
+
+        tombol.addEventListener('click', function(){
+           if(!namaMotor.value && !jumblah.value && !harga.value){
+            alert('kamu belum ngisi apapun!')
+           }else{
+            alert(`motor yang kamu pilih: ${namaMotor.value}`)
+            alert(`jumblah: ${jumblah.value} * harga.value} = Rp. ${jumblah.value * harga.value} ,-`)
+           }
+        })
+
+    </script>
+
+</body>
+</html>
